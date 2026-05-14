@@ -1,4 +1,4 @@
-import { StrictMode } from 'react';
+// import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
 import { HeroesApp } from './HeroesApp';
@@ -6,7 +6,7 @@ import { HeroesApp } from './HeroesApp';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+  // <StrictMode>
     <HeroesApp />
-  </StrictMode>
+  // </StrictMode>
 );
