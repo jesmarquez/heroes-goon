@@ -32,7 +32,7 @@ export const HomePage = () => {
     refetchOnWindowFocus: false,
   });
 
-  console.log({ heroesResponse});
+  // console.log({ heroesResponse});
 
   return (
     <>
