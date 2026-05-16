@@ -15,8 +15,6 @@ export const getHeroesByPageAction = async(
     limit = 1;
   }
   
-  console.log({page});
-
   const { data }= await heroApi.get<HeroesResponse>(`/heroes`, {
     params: {
       limit: limit,
@@ -29,6 +27,7 @@ export const getHeroesByPageAction = async(
     image: `${ BASE_URL }/images/${ hero.image } `
   }))
 
+  // console.log(heroes);
   return {
     ...data,
     heroes: heroes,
