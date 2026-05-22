@@ -7,7 +7,7 @@ describe('getHeroAction', () => {
     const result = await getHeroeAction('clark-kent');
     
 
-    console.log(result);
+    // console.log(result);
 
     expect(result.image).toContain('http');
 
@@ -43,7 +43,7 @@ describe('getHeroAction', () => {
 
     const result = await getHeroeAction('batman-2').catch((error) => {
       expect(error).toBeDefined();
-      console.log(error);
+      // console.log(error);
       // expect(true).toBeFalsy();
       expect(error.message).toBe('Request failed with status code 404');
 
