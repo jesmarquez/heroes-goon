@@ -16,14 +16,15 @@ export const getHeroesByPageAction = async(
     limit = 1;
   }
   
-  const { data }= await heroApi.get<HeroesResponse>(`/heroes`, {
+
+  const { data }= await heroApi.get<HeroesResponse>(`/`, {
     params: {
       limit: limit,
       offset: (page - 1) * limit,
       category: category,
     }
   });
-  // console.log(data);
+  console.log(heroApi);
   const heroes = data.heroes.map( hero => ({
     ...hero,
     image: `${ BASE_URL }/images/${ hero.image } `
